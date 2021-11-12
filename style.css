@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
 :root {
-  --pale-blue: hsl(225, 100%, 94%);
+  --Pale-blue: hsl(225, 100%, 94%);
   --Bright-blue: hsl(245, 75%, 52%);
   --Very-pale-blue: hsl(225, 100%, 98%);
   --Desaturated-blue: hsl(224, 23%, 55%);
@@ -10,28 +11,43 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+
 img {
   max-width: 100%;
 }
+
 body {
   font-family: "Red Hat Display", sans-serif;
-  background-color: var(--pale-blue);
+  background-color: var(--Pale-blue);
   text-align: center;
-}
-p {
-  font-size: 16px;
-  line-height: 1.5;
-  color: var(--Desaturated-blue);
-}
-button {
-  font-family: "Red Hat Display", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
-.bg__image {
-  background: url("./images/pattern-background-mobile.svg") no-repeat
-    center/cover;
-  height: 400px;
+.container h1 {
+  color: var(--Dark-blue);
+  margin: 0.9rem 0;
+}
+
+.container p.para {
+  padding: 0 2rem;
+}
+
+p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--Desaturated-blue);
+  margin-bottom: 0.9rem;
+}
+
+.background_img {
+  background: url(./images/pattern-background-mobile.svg) no-repeat center/cover;
+  height: 25rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -39,73 +55,124 @@ button {
   bottom: 0;
   z-index: -1;
 }
-.btn {
-  border: none;
-  border-radius: 10px;
-  padding: 5px 12px;
-  font-weight: bold;
-  font-size: 15px;
-  cursor: pointer;
+
+.container {
+  background-color: white;
+  margin: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 0.5rem;
+  width: 30rem;
+  /* padding-left: 0.1rem;
+  padding-right: 0.1rem; */
+}
+
+.container img.hero {
+  width: 100%;
+  border-radius: 1rem;
+  padding: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* .hero {
+  width: 100%ss;
+} */
+
+.container .price {
+  margin: auto;
+  background-color: var(--Very-pale-blue);
+  width: 90%;
+  padding: 1rem;
+  /* margin-left: 1.5rem;
+  margin-right: 1rem; */
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container .price section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+.container .price section img {
+  margin-right: 1.5rem;
+}
+
+.container .plan {
+  margin-right: 11rem;
+}
+
+.container .buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
 }
 
 .btn-change {
+  border: none;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
   background-color: transparent;
-  color: var(--Dark-blue);
+  color: var(--Bright-blue);
   text-decoration: underline;
+  font-weight: bold;
+  font-size: 0.8rem;
+  font-family: "Red Hat Display", sans-serif;
+  cursor: pointer;
 }
-.btn-primary {
+
+.btn-first {
+  border: none;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+  font-family: "Red Hat Display", sans-serif;
   background-color: var(--Bright-blue);
-  color: #fff;
-  padding: 15px;
+  color: white;
+  padding: 0.7rem;
+  cursor: pointer;
+  margin-bottom: 0.6rem;
 }
-.btn-primary:hover {
-  /* .btn-change:hover { */
+
+.btn-first:hover {
+  /* color: blueviolet; */
   opacity: 0.9;
 }
-.btn-secondary {
-  background-color: transparent;
+
+.btn-second {
+  border: none;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+  font-family: "Red Hat Display", sans-serif;
   color: var(--Desaturated-blue);
-}
-.btn-secondary:hover {
-  color: hsl(223, 47%, 23%);
-}
-.container {
-  background-color: #fff;
-  margin: 20px;
-  padding-bottom: 20px ;
-  padding: 20px;
-  border-radius: 15px;
-}
-h1 {
-  color: hsl(224, 33%, 14%);
-  margin: 10px 0;
+  padding: 0.7rem;
+  /* background: none; */
+  background-color: transparent;
+  cursor: pointer;
 }
 
-.price {
-  margin: 30px auto;
-  background-color: var(--Very-pale-blue);
-  padding: 10px;
-  width: 90%;
-  border-radius: 6px;
-
-  align-items: center;
-  display: flex;
-
-  justify-content: space-between;
-  font-size: 14px;
-}
-.price.section.myimg {
-  margin-right: 10px;
+.btn-second:hover {
+  color: var(--Dark-blue);
 }
 
-/*  */
-.attribution {
+.attribution a {
   font-size: 11px;
   text-align: center;
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
 @media (min-width: 768px) {
   .bg__image {
     background: url("./images/pattern-background-desktop.svg") no-repeat
@@ -115,4 +182,3 @@ h1 {
 }
 /* .myimg {
   margin-right: 100px; */
-}

@@ -11,50 +11,48 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link rel="stylesheet " href="style.css" />
+    <link rel="stylesheet" href="style.css" />
+
     <title>Frontend Mentor | Order summary card</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style></style>
   </head>
   <body>
-    <div class="bg__image"></div>
-
+    <div class="background_img"></div>
     <div class="container">
-      <div>
-        <div style="width: 200px; height: 200px; background-color: aqua"></div>
-      </div>
-      <!-- <img src="./images/icon-music.svg/>" -->
-      <img src="./images/illustration-hero.svg" />
+      <img
+        style="width: 100%; border-radius: 5px 5px 0 0"
+        src="./images/illustration-hero.svg"
+        alt="hero"
+      />
       <h1>Order Summary</h1>
 
-      <p>
+      <p class="para">
         You can now listen to millions of songs, audiobooks, and podcasts on any
         device anywhere you like!
       </p>
-      <div class="price">
-        <section>
-          <img class="myimg" src="./images/icon-music.svg" alt="" />
-        </section>
-        <section>
-          <!-- <img class="myimg" src="./images/icon-music.svg" alt="" /> -->
-          <h3>Annual Plan</h3>
-          <p>$59.99/year</p>
-        </section>
 
-        <button type="button" class="btn btn-change">change</button>
-        <!-- <img src="./images/icon-music.svg"/>
-    <h3> Annual Plan </h3>
-  <p>   $59.99/year </p>
-  <button type="button" class="btn btn-change">change</button> -->
-        <!-- <button class="btn btn1"> change</button> -->
+      <div>
+        <section class="price">
+          <img src="./images/icon-music.svg" alt="" />
+          <div class="plan">
+            <h3>Annual Plan</h3>
+            <p>$59.99/year</p>
+          </div>
+          <button class="btn-change">Change</button>
+        </section>
       </div>
 
       <div class="buttons">
-        <!-- <button type="button" class="btn btn-primary">Proceed to Payment </button>
-  <button type="button" class="btn btn-secondary">Cancel Order </button> -->
-        <!-- <img src="./images/icon-music.svg"/> -->
-        <button type="button" class="btn btn-primary">
-          Proceed to Payment
-        </button>
-        <button type="button" class="btn btn-secondary">Cancel Order</button>
+        <section>
+          <button class="btn-first">Proceed to Payment</button>
+        </section>
+        <!-- <button class="btn-first">Proceed to Payment</button> -->
+        <!-- <button class="btn-second">Cancel Order</button> -->
+        <section>
+          <button class="btn-second">Cancel Order</button>
+        </section>
       </div>
     </div>
 
@@ -62,7 +60,7 @@
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by <a href="#"> T Sanjana </a>.
     </div>
   </body>
 </html>
